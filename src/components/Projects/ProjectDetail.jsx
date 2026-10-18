@@ -1,34 +1,34 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
-// Saare projects ki details ka data yahan store kar liya
+
 const PROJECT_DETAILS_DB = {
   "virtual-assistant": {
     title: "Virtual Assistant",
-    description: "Yeh ek desktop automation tool hai jo voice commands par kaam karta hai.",
+    description: "desktop automation whxih works on  voice commands.",
     techStack: ["React", "Python", "Web Speech API"],
   },
   "fitness-website": {
     title: "AI Powered Fitness Website",
-    description: "Yeh AI website aapke daily workouts aur calories ko track karti hai.",
+    description: "AI website which tracks daily workouts and calories .",
     techStack: ["React", "Node.js", "TensorFlow.js"],
   },
   "chatbot": {
     title: "AI Chatbot",
-    description: "Ek smart chatbot jo users ke sawalon ke automated jawab deta hai.",
+    description: "smart chatbot which give users automated answers.",
     techStack: ["React", "Express", "OpenAI API"],
   }
-  // Baki projects ka data bhi aise hi add kar sakte hain...
+  
 };
 
 function ProjectDetail() {
-  const { projectId } = useParams(); // URL se ID nikalne ke liye
+  const { projectId } = useParams(); 
   const navigate = useNavigate();
 
-  // Database se clicked project ka data fetch karo
+ 
   const project = PROJECT_DETAILS_DB[projectId];
 
-  // Agar URL mein galat ID daal di toh error handle karega
+  
   if (!project) {
     return (
       <div style={{ padding: "40px", textAlign: "center", color: "white" }}>
