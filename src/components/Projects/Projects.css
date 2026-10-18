@@ -1,0 +1,50 @@
+#projects {
+    width: 100%;
+    min-height: 100vh; /* FIX 1: Changed 'height' to 'min-height' so it expands naturally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    overflow: visible; /* FIX 2: Changed to 'visible' so ScrollTrigger can track it */
+    padding: 80px 0;   /* Adds healthy breathing room at the top and bottom */
+    box-sizing: border-box;
+}
+
+.slider {
+    width: 90%;
+    height: 350px; 
+    display: flex;
+    align-items: center;
+    overflow-x: auto; 
+    overflow-y: hidden;
+    gap: 30px;
+    padding: 20px;
+    
+    /* FIX 1: Hides scrollbar indicator for Firefox */
+    scrollbar-width: none; 
+    
+    /* FIX 2: Hides scrollbar indicator for Internet Explorer and Edge */
+    -ms-overflow-style: none; 
+}
+
+/* FIX 3: Hides scrollbar indicator for Chrome, Safari, and Opera */
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Optional: Hides scrollbars on Chrome, Safari, and Opera for a cleaner slider look */
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+#para {
+    font-size: 4vmax;
+    background: linear-gradient(to right, rgb(151, 14, 112), white);
+    background-clip: text;
+    -webkit-background-clip: text; /* Ensures gradient compatibility on Chrome/Safari */
+    color: transparent;
+    text-align: center;
+    margin: 0;
+}
